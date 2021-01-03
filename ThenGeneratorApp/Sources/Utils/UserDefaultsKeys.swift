@@ -30,3 +30,14 @@ extension UserDefaultsKeys {
         case textAlignment
     }
 }
+
+// MARK: - UIButton
+extension UserDefaultsKeys {
+    public enum UIButtonKeys: String {
+        case setTitle
+        case setAttributedTitle
+        case titleLabelFont
+        case setTitleColor
+        case setImage
+    }
+}

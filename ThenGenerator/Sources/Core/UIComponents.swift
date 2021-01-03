@@ -86,6 +86,8 @@ public enum UIComponents: String, CaseIterable {
         switch self {
         case .label:
             return UILabelModel()
+        case .button:
+            return UIButtonModel()
         default:
             return nil
         }
