@@ -72,7 +72,7 @@ extension ViewInitGenerator {
             "}\n"
         ]
         
-        textArray.forEach { initClosureTextArray.insert($0, at: 1) }
+        textArray.forEach { initClosureTextArray.insert($0, at: 2) }
         
         // add space and new line
         let initClosureText = initClosureTextArray
