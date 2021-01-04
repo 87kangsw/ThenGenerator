@@ -66,7 +66,7 @@ extension ViewInitGenerator {
           }
          */
         var initClosureTextArray = [
-            "\(accessModifier.beginningOfVariable)let \(variableName) = \(components.fullName)().then {",
+            "\(accessModifier.beginningOfVariable)let \(variableName) = \(components.fullName).then {",
             // insert initArray position
             "\(indentString)$0.translatesAutoresizingMaskIntoConstraints = \(translatesAutoresizingMaskIntoConstraints.toString())",
             "}\n"

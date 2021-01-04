@@ -52,6 +52,8 @@ public enum UIComponents: String, CaseIterable {
         switch self {
         case .none:
             return self.rawValue
+        case .collectionView:
+            return "UICollectionView(frame: .zero, collectionViewLayout: <#UICollectionViewLayout#>)"
         case .label,
              .button,
              .segmentedControl,
@@ -64,7 +66,6 @@ public enum UIComponents: String, CaseIterable {
              .stackView,
              .tableView,
              .imageView,
-             .collectionView,
              .textView,
              .scrollView,
              .datePicker,
@@ -77,7 +78,7 @@ public enum UIComponents: String, CaseIterable {
              .toolBar,
              .navigationBar,
              .tabBar:
-            return "UI" + rawValue.prefix(1).uppercased() + rawValue.dropFirst()
+            return "UI" + rawValue.prefix(1).uppercased() + rawValue.dropFirst() + "()"
         }
     }
     
@@ -92,6 +93,8 @@ public enum UIComponents: String, CaseIterable {
             return UITextFieldModel()
         case .tableView:
             return UITableViewModel()
+        case .collectionView:
+            return UICollectionViewModel()
         default:
             return nil
         }

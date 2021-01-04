@@ -82,3 +82,19 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UICollectionView
+extension UserDefaultsKeys {
+    public enum UICollectionViewKeys: String {
+        case register
+        case backgroundColor
+        case dataSource
+        case delegate
+        case showsVerticalScrollIndicator
+        case showsHorizontalScrollIndicator
+        
+        var key: String {
+            return "UICollectionView_" + self.rawValue
+        }
+    }
+}
