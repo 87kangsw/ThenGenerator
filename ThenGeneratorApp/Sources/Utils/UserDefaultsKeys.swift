@@ -125,3 +125,15 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: UIImageView
+extension UserDefaultsKeys {
+    public enum UIImageViewKeys: String {
+        case image
+        case contentMode
+        
+        var key: String {
+            return "UIImageView_" + self.rawValue
+        }
+    }
+}
