@@ -8,19 +8,19 @@
 import Foundation
 
 public struct UIButtonModel {
-    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setTitle.rawValue, defaultValue: true)
+    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setTitle.key, defaultValue: true)
     var setTitle: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setAttributedTitle.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setAttributedTitle.key, defaultValue: false)
     var setAttributedTitle: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.titleLabelFont.rawValue, defaultValue: true)
+    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.titleLabelFont.key, defaultValue: true)
     var titleLabelFont: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setTitleColor.rawValue, defaultValue: true)
+    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setTitleColor.key, defaultValue: true)
     var setTitleColor: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setImage.rawValue, defaultValue: true)
+    @UserDefaultsWrapper(UserDefaultsKeys.UIButtonKeys.setImage.key, defaultValue: true)
     var setImage: Bool
 }
 

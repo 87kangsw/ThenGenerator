@@ -8,28 +8,28 @@
 import Foundation
 
 public struct UILabelModel {
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.text.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.text.key, defaultValue: false)
     var text: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.textColor.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.textColor.key, defaultValue: false)
     var textColor: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.font.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.font.key, defaultValue: false)
     var font: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.adjustsFontSizeToFitWidth.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.adjustsFontSizeToFitWidth.key, defaultValue: false)
     var adjustsFontSizeToFitWidth: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.attributedText.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.attributedText.key, defaultValue: false)
     var attributedText: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.lineBreakMode.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.lineBreakMode.key, defaultValue: false)
     var lineBreakMode: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.numberOfLines.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.numberOfLines.key, defaultValue: false)
     var numberOfLines: Bool
     
-    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.textAlignment.rawValue, defaultValue: false)
+    @UserDefaultsWrapper(UserDefaultsKeys.UILabelKeys.textAlignment.key, defaultValue: false)
     var textAlignment: Bool
 }
 

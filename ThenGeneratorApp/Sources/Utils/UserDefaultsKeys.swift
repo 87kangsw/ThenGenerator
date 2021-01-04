@@ -28,6 +28,10 @@ extension UserDefaultsKeys {
         case lineBreakMode
         case numberOfLines
         case textAlignment
+        
+        var key: String {
+            return "UILabel_" + self.rawValue
+        }
     }
 }
 
@@ -39,6 +43,13 @@ extension UserDefaultsKeys {
         case titleLabelFont
         case setTitleColor
         case setImage
+        
+        var key: String {
+            return "UIButton_" + self.rawValue
+        }
+    }
+}
+
 // MARK: - UITextField
 extension UserDefaultsKeys {
     public enum UITextFieldKeys: String {
