@@ -63,6 +63,19 @@ extension UserDefaultsKeys {
         
         var key: String {
             return "UITextField" + self.rawValue
+
+// MARK: - UITableView
+extension UserDefaultsKeys {
+    public enum UITableViewKeys: String {
+        case estimatedRowHeight
+        case rowHeight
+        case separatorStyle
+        case backgroundColor
+        case separatorColor
+        case register
+        
+        var key: String {
+            return "UITableView_" + self.rawValue
         }
     }
 }
