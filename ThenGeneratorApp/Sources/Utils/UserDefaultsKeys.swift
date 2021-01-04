@@ -62,7 +62,10 @@ extension UserDefaultsKeys {
         case borderStyle
         
         var key: String {
-            return "UITextField" + self.rawValue
+            return "UITextField_" + self.rawValue
+        }
+    }
+}
 
 // MARK: - UITableView
 extension UserDefaultsKeys {
