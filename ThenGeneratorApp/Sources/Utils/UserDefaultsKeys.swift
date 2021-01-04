@@ -98,3 +98,17 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIStackView
+extension UserDefaultsKeys {
+    public enum UIStackViewKeys: String {
+        case axis
+        case spacing
+        case alignment
+        case distribution
+        
+        var key: String {
+            return "UIStackView_" + self.rawValue
+        }
+    }
+}

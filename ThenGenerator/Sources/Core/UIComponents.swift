@@ -95,6 +95,8 @@ public enum UIComponents: String, CaseIterable {
             return UITableViewModel()
         case .collectionView:
             return UICollectionViewModel()
+        case .stackView:
+            return UIStackViewModel()
         default:
             return nil
         }
