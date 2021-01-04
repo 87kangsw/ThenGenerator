@@ -126,7 +126,7 @@ extension UserDefaultsKeys {
     }
 }
 
-// MARK: UIImageView
+// MARK: - UIImageView
 extension UserDefaultsKeys {
     public enum UIImageViewKeys: String {
         case image
@@ -134,6 +134,21 @@ extension UserDefaultsKeys {
         
         var key: String {
             return "UIImageView_" + self.rawValue
+        }
+    }
+}
+
+// MARK: - UITextView
+extension UserDefaultsKeys {
+    public enum UITextViewKeys: String {
+        case text
+        case textColor
+        case font
+        case textAlignment
+        case isEditable
+        
+        var key: String {
+            return "UITextView_" + self.rawValue
         }
     }
 }

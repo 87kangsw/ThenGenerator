@@ -101,6 +101,8 @@ public enum UIComponents: String, CaseIterable {
             return UIActivityIndicatorViewModel()
         case .imageView:
             return UIImageViewModel()
+        case .textView:
+            return UITextViewModel()
         default:
             return nil
         }
