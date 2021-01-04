@@ -88,6 +88,8 @@ public enum UIComponents: String, CaseIterable {
             return UILabelModel()
         case .button:
             return UIButtonModel()
+        case .textField:
+            return UITextFieldModel()
         default:
             return nil
         }

@@ -39,5 +39,19 @@ extension UserDefaultsKeys {
         case titleLabelFont
         case setTitleColor
         case setImage
+// MARK: - UITextField
+extension UserDefaultsKeys {
+    public enum UITextFieldKeys: String {
+        case font
+        case text
+        case textColor
+        case textAlignment
+        case placeholder
+        case attributedPlaceholder
+        case borderStyle
+        
+        var key: String {
+            return "UITextField" + self.rawValue
+        }
     }
 }
