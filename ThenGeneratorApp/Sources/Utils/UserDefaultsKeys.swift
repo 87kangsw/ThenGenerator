@@ -112,3 +112,16 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIActivityIndicatorView
+extension UserDefaultsKeys {
+    public enum UIActivityIndicatorViewKeys: String {
+        case hidesWhenStopped
+        case style
+        case color
+        
+        var key: String {
+            return "UIActivityIndicatorView_" + self.rawValue
+        }
+    }
+}
