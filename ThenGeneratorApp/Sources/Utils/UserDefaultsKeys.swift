@@ -152,3 +152,22 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIScrollView
+extension UserDefaultsKeys {
+    public enum UIScrollViewKeys: String {
+        case isScrollEnabled
+        case isPagingEnabled
+        case bounces
+        case indicatorStyle
+        case showsVerticalScrollIndicator
+        case showsHorizontalScrollIndicator
+        case minimumZoomScale
+        case maximumZoomScale
+        case zoomScale
+
+        var key: String {
+            return "UIScrollView_" + self.rawValue
+        }
+    }
+}

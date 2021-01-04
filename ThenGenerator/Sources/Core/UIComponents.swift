@@ -103,6 +103,8 @@ public enum UIComponents: String, CaseIterable {
             return UIImageViewModel()
         case .textView:
             return UITextViewModel()
+        case .scrollView:
+            return UIScrollViewModel()
         default:
             return nil
         }
