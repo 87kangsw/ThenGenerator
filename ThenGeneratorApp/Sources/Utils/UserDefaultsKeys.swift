@@ -341,3 +341,15 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UINavigationBar
+extension UserDefaultsKeys {
+    public enum UINavigationBarKeys: String {
+        case delegate
+        case setItems
+        
+        var key: String {
+            return "UINavigationBar_" + self.rawValue
+        }
+    }
+}

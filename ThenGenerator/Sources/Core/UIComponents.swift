@@ -130,6 +130,8 @@ public enum UIComponents: String, CaseIterable {
             return UIViewModel()
         case .toolBar:
             return UIToolbarModel()
+        case .navigationBar:
+            return UINavigationBarModel()
         default:
             return nil
         }
