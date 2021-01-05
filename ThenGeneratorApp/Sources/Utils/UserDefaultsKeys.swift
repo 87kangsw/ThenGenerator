@@ -276,3 +276,23 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIStepper
+extension UserDefaultsKeys {
+    public enum UIStepperKeys: String {
+        case isContinuous
+        case autorepeat
+        case wraps
+        case minimumValue
+        case maximumValue
+        case stepValue
+        case value
+        case setDividerImage
+        case setIncrementImage
+        case setDecrementImage
+
+        var key: String {
+            return "UIStepper_" + self.rawValue
+        }
+    }
+}
