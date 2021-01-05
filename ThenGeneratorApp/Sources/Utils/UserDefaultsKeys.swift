@@ -353,3 +353,15 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UITabBar
+extension UserDefaultsKeys {
+    public enum UITabBarKeys: String {
+        case delegate
+        case setItems
+        
+        var key: String {
+            return "UITabBar_" + self.rawValue
+        }
+    }
+}
