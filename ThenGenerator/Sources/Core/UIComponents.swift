@@ -137,8 +137,8 @@ public enum UIComponents: String, CaseIterable {
             return UITabBarModel()
         case .segmentedControl:
             return UISegmentedControlModel()
-        default:
-            return nil
+        case .none:
+            return NoneModel()
         }
     }
 }
