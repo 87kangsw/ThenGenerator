@@ -365,3 +365,19 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UISegmentedControl
+extension UserDefaultsKeys {
+    public enum UISegmentedControlKeys: String {
+        case setImage
+        case setTitle
+        case setEnabled
+        case setBackgroundImage
+        case setDividerImage
+        case setTitleTextAttributes
+        
+        var key: String {
+            return "UISegmentedControl_" + self.rawValue
+        }
+    }
+}

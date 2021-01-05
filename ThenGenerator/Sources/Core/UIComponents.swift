@@ -56,9 +56,10 @@ public enum UIComponents: String, CaseIterable {
             return "UICollectionView(frame: .zero, collectionViewLayout: <#UICollectionViewLayout#>)"
         case .visualEffectView:
             return "UIVisualEffectView(effect: <#UIVisualEffect?#>)"
+        case .segmentedControl:
+            return "UISegmentedControl(items: <#T##[Any]?#>)"
         case .label,
              .button,
-             .segmentedControl,
              .textField,
              .slider,
              .`switch`,
@@ -134,6 +135,8 @@ public enum UIComponents: String, CaseIterable {
             return UINavigationBarModel()
         case .tabBar:
             return UITabBarModel()
+        case .segmentedControl:
+            return UISegmentedControlModel()
         default:
             return nil
         }
