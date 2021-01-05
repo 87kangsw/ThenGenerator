@@ -187,3 +187,16 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIRefreshControl
+extension UserDefaultsKeys {
+    public enum UIRefreshControlKeys: String {
+        case tintColor
+        case attributedTitle
+   
+        var key: String {
+            return "UIRefreshControl_" + self.rawValue
+        }
+    }
+}
+

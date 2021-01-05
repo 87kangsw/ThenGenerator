@@ -107,6 +107,8 @@ public enum UIComponents: String, CaseIterable {
             return UIScrollViewModel()
         case .pageControl:
             return UIPageControlModel()
+        case .refreshControl:
+            return UIRefreshControlModel()
         default:
             return nil
         }
