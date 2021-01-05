@@ -128,6 +128,8 @@ public enum UIComponents: String, CaseIterable {
             return UIVisualEffectViewModel()
         case .view:
             return UIViewModel()
+        case .toolBar:
+            return UIToolbarModel()
         default:
             return nil
         }

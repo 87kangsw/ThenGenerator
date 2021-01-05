@@ -329,3 +329,15 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIToolbar
+extension UserDefaultsKeys {
+    public enum UIToolbarKeys: String {
+        case delegate
+        case setItems
+        
+        var key: String {
+            return "UIToolbar_" + self.rawValue
+        }
+    }
+}
