@@ -126,6 +126,8 @@ public enum UIComponents: String, CaseIterable {
             return UIPickerViewModel()
         case .visualEffectView:
             return UIVisualEffectViewModel()
+        case .view:
+            return UIViewModel()
         default:
             return nil
         }
