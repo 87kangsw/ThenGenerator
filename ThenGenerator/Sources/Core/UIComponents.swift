@@ -115,6 +115,8 @@ public enum UIComponents: String, CaseIterable {
             return UISliderModel()
         case .progressView:
             return UIProgressViewModel()
+        case .searchBar:
+            return UISearchBarModel()
         default:
             return nil
         }

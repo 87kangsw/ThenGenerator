@@ -252,11 +252,27 @@ extension UserDefaultsKeys {
     }
 }
 
+// MARK: - UISearchBar
+extension UserDefaultsKeys {
+    public enum UISearchBarKeys: String {
+        case delegate
+        case placeholder
+        case prompt
+        case text
+        case barTintColor
+        case searchBarStyle
+        case tintColor
+        case isTranslucent
+        case barStyle
+        case showsCancelButton
+        case showsBookmarkButton
+        case showsSearchResultsButton
+        case showsScopeBar
+        case backgroundImage
+        case scopeBarBackgroundImage
 
-
-
-
-
-
-
-
+        var key: String {
+            return "UISearchBar_" + self.rawValue
+        }
+    }
+}
