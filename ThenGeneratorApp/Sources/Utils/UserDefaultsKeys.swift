@@ -317,3 +317,15 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIPickerView
+extension UserDefaultsKeys {
+    public enum UIPickerViewKeys: String {
+        case dataSource
+        case delegate
+
+        var key: String {
+            return "UIPickerView_" + self.rawValue
+        }
+    }
+}

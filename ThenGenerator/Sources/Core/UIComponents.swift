@@ -121,6 +121,8 @@ public enum UIComponents: String, CaseIterable {
             return UIStepperModel()
         case .datePicker:
             return UIDatePickerModel()
+        case .pickerView:
+            return UIPickerViewModel()
         default:
             return nil
         }
