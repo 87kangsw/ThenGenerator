@@ -200,3 +200,18 @@ extension UserDefaultsKeys {
     }
 }
 
+// MARK: - UISwitch
+extension UserDefaultsKeys {
+    public enum UISwitchKeys: String {
+        case isOn
+        case preferredStyle // iOS14
+        case style // iOS14
+        case title // iOS14
+        case onTintColor
+        case thumbTintColor
+
+        var key: String {
+            return "UISwitch_" + self.rawValue
+        }
+    }
+}
