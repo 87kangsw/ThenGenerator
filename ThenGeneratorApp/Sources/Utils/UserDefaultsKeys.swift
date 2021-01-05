@@ -215,3 +215,34 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UISlider
+extension UserDefaultsKeys {
+    public enum UISliderKeys: String {
+        case value
+        case minimumValue
+        case maximumValue
+        case minimumValueImage
+        case maximumValueImage
+        case minimumTrackTintColor
+        case currentMinimumTrackImage
+        case maximumTrackTintColor
+        case currentMaximumTrackImage
+        case thumbTintColor
+        case currentThumbImage
+
+        var key: String {
+            return "UISlider_" + self.rawValue
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

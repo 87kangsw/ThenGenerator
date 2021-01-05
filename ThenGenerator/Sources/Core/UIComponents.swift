@@ -111,6 +111,8 @@ public enum UIComponents: String, CaseIterable {
             return UIRefreshControlModel()
         case .`switch`:
             return UISwitchModel()
+        case .slider:
+            return UISliderModel()
         default:
             return nil
         }
