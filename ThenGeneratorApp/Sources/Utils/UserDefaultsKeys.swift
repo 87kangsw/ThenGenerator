@@ -171,3 +171,19 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIPageControl
+extension UserDefaultsKeys {
+    public enum UIPageControlKeys: String {
+        case currentPage
+        case numberOfPages
+        case hidesForSinglePage
+        case pageIndicatorTintColor
+        case currentPageIndicatorTintColor
+        case backgroundStyle
+        
+        var key: String {
+            return "UIPageControl_" + self.rawValue
+        }
+    }
+}

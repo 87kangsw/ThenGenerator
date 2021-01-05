@@ -105,6 +105,8 @@ public enum UIComponents: String, CaseIterable {
             return UITextViewModel()
         case .scrollView:
             return UIScrollViewModel()
+        case .pageControl:
+            return UIPageControlModel()
         default:
             return nil
         }
