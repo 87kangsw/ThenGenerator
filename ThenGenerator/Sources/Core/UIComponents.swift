@@ -54,6 +54,8 @@ public enum UIComponents: String, CaseIterable {
             return self.rawValue
         case .collectionView:
             return "UICollectionView(frame: .zero, collectionViewLayout: <#UICollectionViewLayout#>)"
+        case .visualEffectView:
+            return "UIVisualEffectView(effect: <#UIVisualEffect?#>)"
         case .label,
              .button,
              .segmentedControl,
@@ -70,7 +72,6 @@ public enum UIComponents: String, CaseIterable {
              .scrollView,
              .datePicker,
              .pickerView,
-             .visualEffectView,
              .refreshControl,
              .searchBar,
              .pageControl,
@@ -123,6 +124,8 @@ public enum UIComponents: String, CaseIterable {
             return UIDatePickerModel()
         case .pickerView:
             return UIPickerViewModel()
+        case .visualEffectView:
+            return UIVisualEffectViewModel()
         default:
             return nil
         }
