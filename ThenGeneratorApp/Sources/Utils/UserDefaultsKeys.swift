@@ -296,3 +296,24 @@ extension UserDefaultsKeys {
         }
     }
 }
+
+// MARK: - UIDatePicker
+extension UserDefaultsKeys {
+    public enum UIDatePickerKeys: String {
+        case calendar
+        case date
+        case locale
+        case timeZone
+        case datePickerMode
+        case datePickerStyle
+        case preferredDatePickerStyle
+        case maximumDate
+        case minimumDate
+        case minuteInterval
+        case countDownDuration
+
+        var key: String {
+            return "UIDatePicker_" + self.rawValue
+        }
+    }
+}
