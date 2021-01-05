@@ -237,6 +237,20 @@ extension UserDefaultsKeys {
     }
 }
 
+// MARK: - UIProgressView
+extension UserDefaultsKeys {
+    public enum UIProgressViewKeys: String {
+        case progressViewStyle
+        case progressTintColor
+        case progressImage
+        case trackTintColor
+        case trackImage
+
+        var key: String {
+            return "UIProgressView_" + self.rawValue
+        }
+    }
+}
 
 
 

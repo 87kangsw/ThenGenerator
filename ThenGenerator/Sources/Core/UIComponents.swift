@@ -113,6 +113,8 @@ public enum UIComponents: String, CaseIterable {
             return UISwitchModel()
         case .slider:
             return UISliderModel()
+        case .progressView:
+            return UIProgressViewModel()
         default:
             return nil
         }
