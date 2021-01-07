@@ -7,7 +7,6 @@
 	<key>com.apple.security.application-groups</key>
 	<array>
 		<string>group.R46Q3HW9V3.dev.kanz.ThenGenerator</string>
-		<string>$(TeamIdentifierPrefix)</string>
 	</array>
 	<key>com.apple.security.files.user-selected.read-only</key>
 	<true/>
