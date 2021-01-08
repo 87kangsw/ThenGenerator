@@ -1,11 +1,9 @@
 ---
-
-name: "\U0001F381 기능 추가 요청"
-about: 새로운 기능이나 요청사항이 있을때 사용합니다.
+name: "\U0001F381 New Feature"
+about: New feature request
 title: ''
 labels: feature
 assignees: ''
-
 ---
 
 ### What do you want ?
