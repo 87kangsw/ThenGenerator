@@ -5,6 +5,8 @@
 //  Created by Kanz on 2021/01/01.
 //
 
+import SwiftUI
+
 public enum UIComponents: String, CaseIterable {
     
     case label
@@ -37,21 +39,17 @@ public enum UIComponents: String, CaseIterable {
     case navigationBar
     case tabBar
     
-    case none = "_VariableName_"
-    
     init(variableName: String) {
         let lowerCasedVariableName = variableName.lowercased()
         let target = UIComponents.allCases
             .filter { lowerCasedVariableName.hasSuffix($0.rawValue.lowercased()) }
             .first
         
-        self = target ?? .none
+        self = target ?? .view
     }
     
-    var fullName: String {
+    var viewInitName: String {
         switch self {
-        case .none:
-            return self.rawValue
         case .collectionView:
             return "UICollectionView(frame: .zero, collectionViewLayout: <#UICollectionViewLayout#>)"
         case .visualEffectView:
@@ -84,8 +82,7 @@ public enum UIComponents: String, CaseIterable {
         }
     }
     
-    
-    func getThenDataModel() -> ThenModelProtocol? {
+    public func getThenDataModel() -> ThenModelProtocol? {
         switch self {
         case .label:
             return UILabelModel()
@@ -137,8 +134,137 @@ public enum UIComponents: String, CaseIterable {
             return UITabBarModel()
         case .segmentedControl:
             return UISegmentedControlModel()
-        case .none:
-            return NoneModel()
         }
+    }
+    
+    // MARK: - For View
+    var fullName: String? {
+        return "UI" + rawValue.prefix(1).uppercased() + rawValue.dropFirst()
+    }
+    
+    var category: ModelCategory {
+        switch self {
+        case .label,
+             .textField,
+             .textView,
+             .searchBar:
+            return .text
+        case .scrollView,
+             .tableView,
+             .collectionView:
+            return .scroll
+        case .button,
+             .pageControl,
+             .`switch`,
+             .slider,
+             .stepper,
+             .segmentedControl:
+            return .control
+        case .activityIndicatorView,
+             .refreshControl,
+             .progressView:
+            return .loading
+        case .pickerView,
+             .datePicker:
+            return .picker
+        case .view,
+             .imageView,
+             .stackView,
+             .visualEffectView,
+             .navigationBar,
+             .tabBar,
+             .toolBar:
+            return .view
+        }
+    }
+    
+    @ViewBuilder
+    func makeView() -> some View {
+        switch self {
+        case .label:
+            UILabelComponent()
+        case .textField:
+            UITextFieldComponent()
+        case .textView:
+            UITextViewComponent()
+        case .searchBar:
+            UISearchBarComponent()
+        case .tableView:
+            UITableViewComponent()
+        case .collectionView:
+            UICollectionViewComponent()
+        case .scrollView:
+            UIScrollViewComponent()
+        case .button:
+            UIButtonComponent()
+        case .segmentedControl:
+            UISegmentedControlComponent()
+        case .slider:
+            UISliderComponent()
+        case .switch:
+            UISwitchComponent()
+        case .stepper:
+            UIStepperComponent()
+        case .pageControl:
+            UIPageControlComponent()
+        case .activityIndicatorView:
+            UIActivityIndicatorViewComponent()
+        case .progressView:
+            UIProgressViewComponent()
+        case .refreshControl:
+            UIRefreshControlComponent()
+        case .datePicker:
+            UIDatePickerComponent()
+        case .pickerView:
+            UIPickerViewComponent()
+        case .stackView:
+            UIStackViewComponent()
+        case .imageView:
+            UIImageViewComponent()
+        case .visualEffectView:
+            UIVisualEffectViewComponent()
+        case .view:
+            UIViewComponent()
+        case .toolBar:
+            UIToolBarComponent()
+        case .navigationBar:
+            UINavigationBarComponent()
+        case .tabBar:
+            UITabBarComponent()
+        }
+    }
+}
+ 
+// MARK: - Component Category
+public enum ModelCategory: String, CaseIterable {
+    case text
+    case scroll
+    case control
+    case loading
+    case picker
+    case view
+    case common
+    
+    var iconName: String {
+        switch self {
+        case .text:
+            return "textformat"
+        case .scroll:
+            return "arrow.up.and.down.square"
+        case .control:
+            return "gamecontroller"
+        case .loading:
+            return "rays"
+        case .picker:
+            return "eyedropper.halffull"
+        case .view:
+            return "eyeglasses"
+        case .common:
+            return "gearshape"
+        }
+    }
+    
+    var title: String {
+        return rawValue.prefix(1).uppercased() + rawValue.dropFirst()
     }
 }

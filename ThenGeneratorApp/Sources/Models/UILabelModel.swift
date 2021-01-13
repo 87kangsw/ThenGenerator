@@ -34,33 +34,37 @@ public struct UILabelModel {
 }
 
 extension UILabelModel: ThenModelProtocol {
+    public var category: ModelCategory {
+        return .text
+    }
+    
     public func thenStringArray(indent: Int) -> [String] {
         let indentString = String(repeating: " ", count: indent)
         var strings: [String] = []
         
         if self.adjustsFontSizeToFitWidth == true {
-            strings.append("\(indentString)$0.adjustsFontSizeToFitWidth = <#..#>")
+            strings.append("\(indentString)$0.adjustsFontSizeToFitWidth = <#Bool#>")
         }
         if self.attributedText == true {
-            strings.append("\(indentString)$0.attributedText = <#..#>")
+            strings.append("\(indentString)$0.attributedText = <#NSAttributedString?#>")
         }
         if self.font == true {
-            strings.append("\(indentString)$0.font = <#..#>")
+            strings.append("\(indentString)$0.font = <#UIFont#>")
         }
         if self.lineBreakMode == true {
-            strings.append("\(indentString)$0.lineBreakMode = <#..#>")
+            strings.append("\(indentString)$0.lineBreakMode = <#NSLineBreakMode#>")
         }
         if self.numberOfLines == true {
-            strings.append("\(indentString)$0.numberOfLines = <#..#>")
+            strings.append("\(indentString)$0.numberOfLines = <#Int#>")
         }
         if self.text == true {
-            strings.append("\(indentString)$0.text = <#..#>")
+            strings.append("\(indentString)$0.text = <#String?#>")
         }
         if self.textAlignment == true {
-            strings.append("\(indentString)$0.textAlignment = <#..#>")
+            strings.append("\(indentString)$0.textAlignment = <#NSTextAlignment#>")
         }
         if self.textColor == true {
-            strings.append("\(indentString)$0.textColor = <#..#>")
+            strings.append("\(indentString)$0.textColor = <#UIColor!#>")
         }
         
         return strings

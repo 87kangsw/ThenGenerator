@@ -8,7 +8,8 @@
 import Foundation
 
 public struct UIViewModel {
-    
+    @UserDefaultsWrapper(UserDefaultsKeys.UIViewKeys.backgroundColor.key, defaultValue: true)
+    var backgroundColor: Bool
 }
 
 extension UIViewModel: ThenModelProtocol {
@@ -16,7 +17,9 @@ extension UIViewModel: ThenModelProtocol {
         let indentString = String(repeating: " ", count: indent)
         var strings: [String] = []
         
-        strings.append("\(indentString)$0.backgroundColor = <#UIColor#>")
+        if self.backgroundColor == true {
+            strings.append("\(indentString)$0.backgroundColor = <#UIColor#>")
+        }
         
         return strings
     }

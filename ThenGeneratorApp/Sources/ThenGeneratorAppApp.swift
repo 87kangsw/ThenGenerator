@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct ThenGeneratorAppApp: App {
+    @StateObject private var homeState = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear(perform: {
-                    print(UILabelModel().thenStringArray(indent: 4))
-                })
+            Home()
+                .environmentObject(homeState)
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }
