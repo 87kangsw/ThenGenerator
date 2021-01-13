@@ -36,25 +36,25 @@ extension UITextFieldModel: ThenModelProtocol {
         var strings: [String] = []
         
         if self.font == true {
-            strings.append("\(indentString)$0.font = <#..#>")
+            strings.append("\(indentString)$0.font = <#UIFont?#>")
         }
         if self.text == true {
-            strings.append("\(indentString)$0.text = <#..#>")
+            strings.append("\(indentString)$0.text = <#String#>")
         }
         if self.textColor == true {
-            strings.append("\(indentString)$0.textColor = <#..#>")
+            strings.append("\(indentString)$0.textColor = <#UIColor?#>")
         }
         if self.textAlignment == true {
-            strings.append("\(indentString)$0.textAlignment = <#..#>")
+            strings.append("\(indentString)$0.textAlignment = <#NSTextAlignment#>")
         }
         if self.placeholder == true {
-            strings.append("\(indentString)$0.placeholder = <#..#>")
+            strings.append("\(indentString)$0.placeholder = <#String?#>")
         }
         if self.attributedPlaceholder == true {
-            strings.append("\(indentString)$0.attributedPlaceholder = <#..#>")
+            strings.append("\(indentString)$0.attributedPlaceholder = <#NSAttributedString?#>")
         }
         if self.borderStyle == true {
-            strings.append("\(indentString)$0.borderStyle = <#..#>")
+            strings.append("\(indentString)$0.borderStyle = <#UITextField.BorderStyle#>")
         }
         
         return strings
