@@ -12,7 +12,7 @@ public class ViewInitGenerator {
     public static let shared = ViewInitGenerator()
     
     init() {
-        //CoreDataManager.shared        
+                
     }
     
     // MARK: - Generate then Strings
@@ -48,7 +48,6 @@ extension ViewInitGenerator {
     
     func generate(startPosition: Int, variableName: String) -> String {
         let components = UIComponents(variableName: variableName)
-        let space = String(repeating: " ", count: startPosition)
         
         let commonModel = CommonModel()
         let accessModifier = commonModel.accessModifier
@@ -71,13 +70,14 @@ extension ViewInitGenerator {
             "\(indentString)$0.translatesAutoresizingMaskIntoConstraints = \(translatesAutoresizingMaskIntoConstraints.toString())",
             "}\n"
         ]
-        
-        textArray.forEach { initClosureTextArray.insert($0, at: 2) }
+
+        initClosureTextArray.insert(contentsOf: textArray, at: 2)
         
         // add space and new line
         let initClosureText = initClosureTextArray
-            .map { "\(space)\($0)\n" }
+            .map { "\(indentString)\($0)\n" }
             .joined()
+        
         return initClosureText
     }
 }
