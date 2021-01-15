@@ -21,3 +21,9 @@ public struct CommonModel {
     @UserDefaultsWrapper(UserDefaultsKeys.CommonKeys.indent.rawValue, defaultValue: 4)
     var indent: Int
 }
+
+extension CommonModel: ThenModelProtocol {
+    public func thenStringArray(indent: Int) -> [String] {
+        return []
+    }
+}

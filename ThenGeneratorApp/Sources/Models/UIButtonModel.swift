@@ -28,21 +28,21 @@ extension UIButtonModel: ThenModelProtocol {
     public func thenStringArray(indent: Int) -> [String] {
         let indentString = String(repeating: " ", count: indent)
         var strings: [String] = []
-        
+
         if self.setTitle == true {
-            strings.append("\(indentString)$0.setTitle(<#..#>, for: <#..#>)")
+            strings.append("\(indentString)$0.setTitle(<#String?#>, for: <#UIControl.State#>)")
         }
-        if self.setAttributedTitle == true {
-            strings.append("\(indentString)$0.setAttributedTitle(<#..#>, for: <#..#>)")
+        if self.setAttributedTitle == true { 
+            strings.append("\(indentString)$0.setAttributedTitle(<#NSAttributedString?#>, for: <#UIControl.State#>)")
         }
         if self.titleLabelFont == true {
-            strings.append("\(indentString)$0.titleLabel?.font = <#..#>")
+            strings.append("\(indentString)$0.titleLabel?.font = <#UIFont#>")
         }
         if self.setTitleColor == true {
-            strings.append("\(indentString)$0.setTitleColor(<#..#>, for: <#..#>)")
+            strings.append("\(indentString)$0.setTitleColor(<#UIColor#>, for: <#UIControl.State#>)")
         }
         if self.setImage == true {
-            strings.append("\(indentString)$0.setImage(<#..#>, for: <#..#>)")
+            strings.append("\(indentString)$0.setImage(<#UIImage?#>, for: <#UIControl.State#>)")
         }
         
         return strings

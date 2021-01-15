@@ -7,10 +7,10 @@
 
 import Foundation
 
+// MARK: Common
 public enum UserDefaultsKeys {
     
-    // MARK: Common
-    public enum CommonKeys: String {
+    public enum CommonKeys: String, CaseIterable {
         case translatesAutoresizingMaskIntoConstraints
         case accessModifier
         case indent
@@ -19,7 +19,7 @@ public enum UserDefaultsKeys {
 
 // MARK: - UILabel
 extension UserDefaultsKeys {
-    public enum UILabelKeys: String {
+    public enum UILabelKeys: String, CaseIterable {
         case text
         case textColor
         case font
@@ -37,7 +37,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIButton
 extension UserDefaultsKeys {
-    public enum UIButtonKeys: String {
+    public enum UIButtonKeys: String, CaseIterable {
         case setTitle
         case setAttributedTitle
         case titleLabelFont
@@ -52,7 +52,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UITextField
 extension UserDefaultsKeys {
-    public enum UITextFieldKeys: String {
+    public enum UITextFieldKeys: String, CaseIterable {
         case font
         case text
         case textColor
@@ -69,7 +69,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UITableView
 extension UserDefaultsKeys {
-    public enum UITableViewKeys: String {
+    public enum UITableViewKeys: String, CaseIterable {
         case estimatedRowHeight
         case rowHeight
         case separatorStyle
@@ -85,7 +85,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UICollectionView
 extension UserDefaultsKeys {
-    public enum UICollectionViewKeys: String {
+    public enum UICollectionViewKeys: String, CaseIterable {
         case register
         case backgroundColor
         case dataSource
@@ -101,7 +101,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIStackView
 extension UserDefaultsKeys {
-    public enum UIStackViewKeys: String {
+    public enum UIStackViewKeys: String, CaseIterable {
         case axis
         case spacing
         case alignment
@@ -115,7 +115,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIActivityIndicatorView
 extension UserDefaultsKeys {
-    public enum UIActivityIndicatorViewKeys: String {
+    public enum UIActivityIndicatorViewKeys: String, CaseIterable {
         case hidesWhenStopped
         case style
         case color
@@ -128,7 +128,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIImageView
 extension UserDefaultsKeys {
-    public enum UIImageViewKeys: String {
+    public enum UIImageViewKeys: String, CaseIterable {
         case image
         case contentMode
         
@@ -140,7 +140,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UITextView
 extension UserDefaultsKeys {
-    public enum UITextViewKeys: String {
+    public enum UITextViewKeys: String, CaseIterable {
         case text
         case textColor
         case font
@@ -155,7 +155,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIScrollView
 extension UserDefaultsKeys {
-    public enum UIScrollViewKeys: String {
+    public enum UIScrollViewKeys: String, CaseIterable {
         case isScrollEnabled
         case isPagingEnabled
         case bounces
@@ -174,7 +174,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIPageControl
 extension UserDefaultsKeys {
-    public enum UIPageControlKeys: String {
+    public enum UIPageControlKeys: String, CaseIterable {
         case currentPage
         case numberOfPages
         case hidesForSinglePage
@@ -190,7 +190,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIRefreshControl
 extension UserDefaultsKeys {
-    public enum UIRefreshControlKeys: String {
+    public enum UIRefreshControlKeys: String, CaseIterable {
         case tintColor
         case attributedTitle
    
@@ -202,7 +202,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UISwitch
 extension UserDefaultsKeys {
-    public enum UISwitchKeys: String {
+    public enum UISwitchKeys: String, CaseIterable {
         case isOn
         case preferredStyle // iOS14
         case style // iOS14
@@ -218,7 +218,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UISlider
 extension UserDefaultsKeys {
-    public enum UISliderKeys: String {
+    public enum UISliderKeys: String, CaseIterable {
         case value
         case minimumValue
         case maximumValue
@@ -239,7 +239,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIProgressView
 extension UserDefaultsKeys {
-    public enum UIProgressViewKeys: String {
+    public enum UIProgressViewKeys: String, CaseIterable {
         case progressViewStyle
         case progressTintColor
         case progressImage
@@ -254,7 +254,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UISearchBar
 extension UserDefaultsKeys {
-    public enum UISearchBarKeys: String {
+    public enum UISearchBarKeys: String, CaseIterable {
         case delegate
         case placeholder
         case prompt
@@ -279,7 +279,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIStepper
 extension UserDefaultsKeys {
-    public enum UIStepperKeys: String {
+    public enum UIStepperKeys: String, CaseIterable {
         case isContinuous
         case autorepeat
         case wraps
@@ -299,7 +299,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIDatePicker
 extension UserDefaultsKeys {
-    public enum UIDatePickerKeys: String {
+    public enum UIDatePickerKeys: String, CaseIterable {
         case calendar
         case date
         case locale
@@ -320,7 +320,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIPickerView
 extension UserDefaultsKeys {
-    public enum UIPickerViewKeys: String {
+    public enum UIPickerViewKeys: String, CaseIterable {
         case dataSource
         case delegate
 
@@ -332,7 +332,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UIToolbar
 extension UserDefaultsKeys {
-    public enum UIToolbarKeys: String {
+    public enum UIToolbarKeys: String, CaseIterable {
         case delegate
         case setItems
         
@@ -344,7 +344,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UINavigationBar
 extension UserDefaultsKeys {
-    public enum UINavigationBarKeys: String {
+    public enum UINavigationBarKeys: String, CaseIterable {
         case delegate
         case setItems
         
@@ -356,7 +356,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UITabBar
 extension UserDefaultsKeys {
-    public enum UITabBarKeys: String {
+    public enum UITabBarKeys: String, CaseIterable {
         case delegate
         case setItems
         
@@ -368,7 +368,7 @@ extension UserDefaultsKeys {
 
 // MARK: - UISegmentedControl
 extension UserDefaultsKeys {
-    public enum UISegmentedControlKeys: String {
+    public enum UISegmentedControlKeys: String, CaseIterable {
         case setImage
         case setTitle
         case setEnabled
@@ -378,6 +378,28 @@ extension UserDefaultsKeys {
         
         var key: String {
             return "UISegmentedControl_" + self.rawValue
+        }
+    }
+}
+
+// MARK: UIView
+extension UserDefaultsKeys {
+    public enum UIViewKeys: String, CaseIterable {
+        case backgroundColor
+        
+        var key: String {
+            return "UIView_" + self.rawValue
+        }
+    }
+}
+
+// MARK: UIVisualEffectView
+extension UserDefaultsKeys {
+    public enum UIVisualEffectViewKeys: String, CaseIterable {
+        case effect
+        
+        var key: String {
+            return "UIVisualEffectView_" + self.rawValue
         }
     }
 }
