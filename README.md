@@ -57,11 +57,14 @@ ThenGenerator is Xcode Source Editor Extension for [Then](https://github.com/dev
 <table>
 <tr>
 <th>Single</th>
-<th>Multiline</th>
 </tr>
 <td>
 <img src="./.github/images/single.gif">
 </td>
+
+<tr>
+<th>Multiline</th>
+</tr>
 <td>
 <img src="./.github/images/multiLine.gif">
 </td>
