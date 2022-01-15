@@ -52,6 +52,8 @@ targets:
         type: group
       - path: 'ThenGeneratorApp/Sources/Views/ComponentViews'
         type: group
+      - path: 'ThenGeneratorApp/Sources/ViewModels'
+        type: group
     settings:
       INFOPLIST_FILE: ThenGenerator/Supporting Files/Info.plist
       DEVELOPMENT_TEAM: R46Q3HW9V3
