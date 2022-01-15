@@ -73,6 +73,9 @@ ThenGenerator is Xcode Source Editor Extension for [Then](https://github.com/dev
 
 ## Contribution
 
+### Xcodegen Support
+- Clone -> `xcodegen generate` 
+
 If you find a bug or want to add a new property, find `XXXXModel.swift` in Models Folder and fix or append property.
 And find `XXXXComponent.swift` in ComponentViews Folder and add `SwitchView` with new property.
 
