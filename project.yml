@@ -1,0 +1,59 @@
+name: ThenGeneratorApp
+options:
+  bundleIdPrefix: dev.kanz
+  deploymentTarget:
+    macOS: '11.0'
+  usesTabs: true
+  indentWidth: 4
+  tabWidth: 4
+  generateEmptyDirectories: true
+  createIntermediateGroups: true
+targets:
+  ThenGeneratorApp:
+    platform: macOS
+    type: application
+    deploymentTarget: '11.0'
+    entitilements:
+      path: ThenGeneratorApp/Supporting Files/ThenGeneratorApp.entitlements
+    sources:
+      - path: 'ThenGeneratorApp/Sources'
+        type: group
+      - path: 'ThenGeneratorApp/Supporting Files'
+        type: group
+      - path: 'ThenGeneratorApp/Resources'
+        type: group
+      - path: 'ThenGenerator/Sources/Core'
+        type: group
+      - path: 'ThenGeneratorApp/Shared'
+        type: group
+      - path: 'ThenGeneratorApp/Sources/Models'
+        type: group
+      - path: 'ThenGeneratorApp/Sources/Views/ComponentViews'
+        type: group
+    settings:
+      INFOPLIST_FILE: ThenGeneratorApp/Supporting Files/Info.plist
+      DEVELOPMENT_TEAM: R46Q3HW9V3
+  ThenGenerator:
+    platform: macOS
+    type: xcode-extension
+    deploymentTarget: '11.0'
+    entitilements:
+      path: ThenGenerator/Supporting Files/ThenGenerator.entitlements
+    sources:
+      - path: 'ThenGenerator/Sources'
+        type: group
+      - path: 'ThenGenerator/Sources/Core'
+        type: group
+      - path: 'ThenGenerator/Supporting Files'
+        type: group
+      - path: 'ThenGeneratorApp/Shared'
+        type: group
+      - path: 'ThenGeneratorApp/Sources/Models'
+        type: group
+      - path: 'ThenGeneratorApp/Sources/Views/ComponentViews'
+        type: group
+    settings:
+      INFOPLIST_FILE: ThenGenerator/Supporting Files/Info.plist
+      DEVELOPMENT_TEAM: R46Q3HW9V3
+    dependencies:
+      - target: ThenGeneratorApp
